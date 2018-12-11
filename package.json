@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build-image": "docker build -t $npm_config_image .",
+    "start-local": "docker run -p 80:80 $npm_config_image"
+  }
+}
