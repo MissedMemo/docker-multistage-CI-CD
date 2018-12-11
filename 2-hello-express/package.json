@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server"
+    "start": "node server",
+    "build-image": "docker build -t express-demo .",
+    "start-local": "docker run -p 3000:3000 express-demo"
   },
   "dependencies": {
     "express": "^4.16.4"
