@@ -1,16 +1,15 @@
 FROM iron/node
 
-# location to copy output
-WORKDIR /dist
+# location to copy files & perform operations
+WORKDIR /app
 
-# copy package & package-lock files
+# copy package AND lock files, & generate dependency libs
 COPY package*.json ./
-
 RUN npm install
 
-# bundle app source
-COPY . .
+COPY server.js ./
 
+# open a port
 EXPOSE 3000
 
 ENTRYPOINT ["npm", "start"]
