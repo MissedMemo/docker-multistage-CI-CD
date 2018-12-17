@@ -1,19 +1,23 @@
 FROM iron/node as node_base
 
-# defined a named build 'stage'
 FROM node_base as dependencies_base
 WORKDIR /tmp
 COPY package*.json ./
 RUN npm install
 
-# copy only necessary files from earlier stage
-# leave behind lock file etc.
+FROM node_base as build_base
+WORKDIR /tmp
+COPY --from=dependencies_base /tmp/node_modules ./node_modules
+COPY . .
+RUN npm run build
+
 FROM node_base
 WORKDIR /app
-COPY --from=dependencies_base /tmp/node_modules /app/node_modules
-COPY server.js ./
+COPY --from=build_base /tmp/node_modules ./node_modules
+COPY --from=build_base /tmp/dist ./dist
+COPY server ./server
+COPY package.json ./
 
-# open a port
 EXPOSE 3000
 
-CMD ["node", "server"]
+ENTRYPOINT [ "npm", "start" ]
