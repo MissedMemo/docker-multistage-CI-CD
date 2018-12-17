@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode development",
+    "start": "node server"
+  },
   "dependencies": {
     "express": "^4.16.4",
     "react": "^16.6.3",
