@@ -2,14 +2,14 @@ FROM iron/node as node_base
 
 FROM node_base as dependencies_base
 WORKDIR /tmp
-COPY package*.json ./
-RUN npm install
+COPY package.json yarn.lock ./
+RUN yarn
 
 FROM node_base as build_base
 WORKDIR /tmp
 COPY --from=dependencies_base /tmp/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN yarn build
 
 FROM node_base
 WORKDIR /app
@@ -20,4 +20,4 @@ COPY package.json ./
 
 EXPOSE 3000
 
-ENTRYPOINT [ "npm", "start" ]
+ENTRYPOINT [ "yarn", "start" ]
