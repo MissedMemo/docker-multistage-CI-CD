@@ -16,8 +16,7 @@ WORKDIR /app
 COPY --from=build_base /tmp/node_modules ./node_modules
 COPY --from=build_base /tmp/dist ./dist
 COPY server ./server
-COPY package.json ./
 
 EXPOSE 3000
 
-ENTRYPOINT [ "yarn", "start" ]
+CMD [ "node", "server" ]
