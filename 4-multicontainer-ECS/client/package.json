@@ -1,11 +1,11 @@
 {
-  "name": "hello-react",
+  "name": "demo-ecs",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start": "node server"
+    "start": "node web-server"
   },
   "dependencies": {
     "express": "^4.16.4",
