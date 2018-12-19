@@ -6,7 +6,7 @@
 
 * docker build -t missedmemo/simple .
 * docker images
-* docker prune -f
+* docker image prune -f
 * docker run -d -p 3000:3000 --name bozo missedmemo/simple
 * docker ps -a
 * docker exec -it bozo sh
