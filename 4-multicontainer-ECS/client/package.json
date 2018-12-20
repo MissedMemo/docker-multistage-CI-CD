@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start": "node web-server"
+    "start": "node host-server"
   },
   "dependencies": {
     "express": "^4.16.4",

@@ -19,4 +19,4 @@ COPY server ./server
 
 EXPOSE 3000
 
-CMD [ "node", "web-server" ]
+CMD [ "node", "host-server" ]
