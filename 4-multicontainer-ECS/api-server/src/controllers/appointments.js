@@ -1,7 +1,8 @@
 
 const getAppointments = function(req, res) {
-  console.log('calling the appointments service...')
-  res.json('testing!')
+  // retrieve data from appointments service...
+  const appointments = [ 'lunch with Emily', 'call Ted', 'parent-teacher night' ]
+  res.json( appointments )
 }
 
 module.exports = {
