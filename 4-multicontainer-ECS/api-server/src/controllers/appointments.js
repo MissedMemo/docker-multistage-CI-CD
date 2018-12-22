@@ -1,7 +1,7 @@
 
 const getAppointments = function(req, res) {
-  console.log('called from router')
-  res.json('testing...')
+  console.log('calling the appointments service...')
+  res.json('testing!')
 }
 
 module.exports = {
