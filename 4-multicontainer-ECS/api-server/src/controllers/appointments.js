@@ -1,5 +1,5 @@
 
-const getAppointments = function(req, res) {
+const getAppointments = (req, res) => {
   
   // retrieve data from appointments service...
   const appointments = [ 'lunch with Emily', 'call Ted', 'parent-teacher night' ]
