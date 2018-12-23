@@ -14,6 +14,9 @@
 * __Stop the container:__ docker stop bozo
 * __Remove the container:__ docker rm bozo
 * __Remove the image:__ docker rmi missedmemo/simple
+* __Create shared network:__ docker network create myNet
+* __List networks:__ docker network ls
+* __Remove network:__ docker network rm myNet
 
 ## Sample steps to Build & Run Elastic Beanstalk Demo
 
