@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { getAppointments } from './api-client'
+
 class App extends Component {
 
   state = {
@@ -7,9 +9,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // simulate fetch from API...
-    const appointments = [ 'lunch with Emily', 'call Ted', 'parent-teacher night' ]
-    this.setState({ appointments })
+    
+    getAppointments()
+      .then( appointments => {
+        console.log('response was:', appointments )
+        this.setState({ appointments })
+      })
+      .catch( err => console.log('errrrrr....', err ))
   }
 
   render() {

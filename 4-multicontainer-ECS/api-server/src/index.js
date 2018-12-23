@@ -2,7 +2,10 @@
 
 const express = require('express')
 const routes = require('./routes')
+const cors = require('cors')
 const app = express()
+
+app.use( cors() ) // adds header, Access-Control-Allow-Origin: *
 
 const baseRoute = '/api/v1' // move to config
 
