@@ -1,0 +1,7 @@
+.dockerignore
+Dockerfile
+.DS_Store
+.git/
+**/*.swp
+**/*.log
+.vscode
