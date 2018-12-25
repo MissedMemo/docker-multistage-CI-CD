@@ -2,7 +2,7 @@
 
 ### A set of projects, progressing in complexity, exploring optimized Docker image construction & debugging, container management, AWS hosting of multiple containers via ECS, and a Jenkins CI/CD pipeline.
 
-## Useful Docker Command Examples
+## (Newer) Docker Command Syntax Examples
 
 * __Build a project:__ docker build -t missedmemo/simple .
 * __List all local images:__ docker images
@@ -28,8 +28,14 @@
 * set up Elastic Beanstalk environment via EBS Console or AWS CLI
 <br> _create a new application, specifying a web server environment, and uploading Dockerrun.aws.json_
 
-## Steps to Build & Run ECS Demo
+## Steps to Build & Run Multi-Container ECS Demo
 
+#### Run Locally
+* cd 4-multicontainer-ecs
+* docker-compose up
+* navigate to _localhost:3000_
+
+#### Upload to ECS
 * blah blah blah...
 
 ## Steps to Build & Run Sample Jenkins CI/CD Pipeline
