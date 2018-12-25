@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode development",
-    "start": "node host-server"
+    "start": "node web-server"
   },
   "dependencies": {
     "axios": "^0.18.0",

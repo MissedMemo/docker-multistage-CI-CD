@@ -15,8 +15,8 @@ FROM node_base
 WORKDIR /app
 COPY --from=build_base /tmp/node_modules ./node_modules
 COPY --from=build_base /tmp/dist ./dist
-COPY host-server ./host-server
+COPY web-server ./web-server
 
 EXPOSE 3000
 
-CMD [ "node", "host-server" ]
+CMD [ "node", "web-server" ]
